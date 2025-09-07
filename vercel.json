@@ -1,0 +1,20 @@
+{
+  "name": "ai-home-assistant",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "OPENROUTER_API_KEY": "@openrouter-api-key",
+    "SITE_URL": "https://ai-home-assistant.vercel.app"
+  }
+}
